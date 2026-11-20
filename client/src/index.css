@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-cream: #faf7f2;
+  --color-sand: #efe8dc;
+  --color-beige: #d9cdb8;
+  --color-oak: #a67c52;
+  --color-oak-dark: #8a6340;
+  --color-walnut: #6b4a2f;
+  --color-stone: #8a8279;
+  --color-charcoal: #2b2a28;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-sans text-charcoal antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-oak;
+  }
+}
